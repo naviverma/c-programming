@@ -1,0 +1,42 @@
+#include <stdio.h>
+//area of rectangle
+int main()
+{
+    int i;
+    int j;
+    int a; //breadth;
+    int b; //lenght;
+
+    scanf("%d", &a);
+    scanf("%d", &b);
+    printf(" the area of the rectangle is =%d", a * b);
+    printf("\n");
+
+    for (i = 1; i <= a; i++)
+    {
+        for (j = 1; j <= b; j++)
+        {
+            printf("* ");
+        }
+        printf("\n");
+    }
+    printf("the perimeter of the rectangle is ==%d", 2*(a + b));
+    printf("\n");
+    for (i = 1; i <= a; i++)
+    {
+        for (j = 1; j <= b; j++)
+        {
+            if (i == 1 || i == a || j == 1 || j == b)
+            {
+                printf("*");
+            }
+            else
+            {
+                printf(" ");
+            }
+        }
+        printf("\n");
+    }
+    
+}
+
