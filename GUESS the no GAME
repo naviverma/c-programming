@@ -1,0 +1,33 @@
+#include<stdio.h> 
+#include<math.h> 
+#include<conio.h> 
+//these are some header files that are essential for the programme
+#include<stdlib.h>
+#include<time.h>
+int main(){
+    int number,guess,nguesses;
+    nguesses=0;
+    srand(time(0));//this will specify that the no should be random either the programme will give 41
+    number=rand()%100+1;//this will gerates the random no between 1 to 100 because of % condition
+    //printf("%d \n",number);
+    do{ printf("guess the no that is always between 1 to 100 \n");
+    printf("dimaag lgake aishaaaaaaa!!!!\n");
+    scanf("%d",&guess);
+    if(guess>number){
+        printf("u have higher thought but  lower the no \n");
+    }
+    else if(guess<number){
+        printf("u are down to earth but please raise the no\n ");
+    }
+    else{
+        printf("u have set the bench mark!!!!!! congo buddy\n");
+    }
+    nguesses++;
+    }while(guess!=number);
+
+ printf("u have guessed the no in %d trials \n",nguesses);
+ if(nguesses==1){printf("u are the champ bro");}
+ else if(nguesses>3){printf("good");}
+ else{printf("need improvement");}
+return 0;
+}
